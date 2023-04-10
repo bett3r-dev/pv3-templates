@@ -3,7 +3,6 @@ FROM node:alpine
 WORKDIR /app
 
 # Services
-COPY build/shoppingCart .
 
 COPY build/domainEvents ./domainEvents
 COPY build/libraries ./libraries

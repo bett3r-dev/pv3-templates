@@ -1,5 +1,1 @@
-logger:
-  logLevel: debug
 
-express:
-  port: 1984
