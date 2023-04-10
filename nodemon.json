@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "frontend-library",
+    "thunder-tests"
+  ]
+}

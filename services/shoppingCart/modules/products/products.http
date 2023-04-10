@@ -1,0 +1,6 @@
+POST http://localhost:1984/products/uuid/create-product
+Content-Type: application/json
+
+{
+  "name": "Product Name"
+}
