@@ -71,6 +71,10 @@ Configuration()
     database.onStarted( async () => {
       await endpoints.start();
       eventsourcing.logEventsourcingRoutes();
+
+      //*******************************************
+      // Local Broker for monolith services. 
+      //*******************************************
       const loggerInstance = logger.createLoggerInstance( 'root' );
       const broker = Broker({
         frontendLibraryPath: path.join( __dirname, '../../frontend-library/src' ),
