@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "strict": true,
+    "skipLibCheck": true
+  }
+}

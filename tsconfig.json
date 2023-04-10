@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "./build",
+		"rootDir": ".",
+    "allowJs": true,
+		"alwaysStrict": false,
+		"checkJs": false,
+		"declarationMap": true,
+		"noImplicitAny": false,
+		"strict": false,
+		"strictBindCallApply": false,
+		"strictFunctionTypes": false,
+		"strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ESNext",
+    "noImplicitThis": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "noErrorTruncation":true,
+    "composite": true,
+    // This one is important so @bett3r-dev/jsonschema-definer works with optionals
+    "strictNullChecks": true,
+    "paths": {
+			"@domainEvents": ["./domainEvents/src"],
+			"@libraries": ["./libraries/src"],
+		},
+	},
+	"ts-node": {
+    "esm": true,
+    "compilerHost": true,
+    "emit": true,
+		"transpileOnly": true,
+    "require": ["tsconfig-paths/register"],
+		"ignore": [
+			"(?:^|/)node_modules/",
+      "build"
+		]
+	},
+	"include": [
+    "domainEvents",
+    "libraries",
+    "services",
+    "services/**/package.json",
+  ],
+  "exclude": [
+    "(?:^|/)node_modules/",
+    "build"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "workbench.iconTheme": "bett3r-icon-theme",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "thunder-client.saveToWorkspace": true,
+  "thunder-client.autoRunCurl": false,
+  "thunder-client.workspaceRelativePath": ".vscode"
+}
