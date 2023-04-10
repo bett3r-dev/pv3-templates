@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../build/-service-",
+    "tsBuildInfoFile": "../../build/tsconfig.tsbuildinfo.services--service-",
+		"rootDir": ".",
+  },
+  "references": [
+    {"path": "../../domainEvents"},
+    {"path": "../../libraries"},
+  ],
+  "include": [
+    ".",
+    "package.json"
+  ],
+  "exclude": [
+    "(?:^|/)node_modules/",
+    "build"
+  ]
+}
