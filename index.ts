@@ -32,7 +32,7 @@ Configuration()
     const onValidationError = ( err: any, endpoint: Endpoint ) => {
       log.error( 'Validation error procesing endpoint', endpoint.method, endpoint.route, err );
     };
-    
+
     const logger = Logger( loggerConfig, ConsoleLogger());
     const endpoints = Endpoints( packageJson, EndpointValidation( validateSchema, onValidationError ), Express( expressConfig, logger ));
     const database = Database( MemoryDb());
@@ -73,11 +73,10 @@ Configuration()
       eventsourcing.logEventsourcingRoutes();
 
       //*******************************************
-      // Local Broker for monolith services. 
+      // Local Broker for monolith services.
       //*******************************************
       const loggerInstance = logger.createLoggerInstance( 'root' );
       const broker = Broker({
-        frontendLibraryPath: path.join( __dirname, '../../frontend-library/src' ),
         eventstores:[{
           type: 'databasePort',
           name: 'memory',
@@ -88,7 +87,7 @@ Configuration()
       broker.onStarted( async () => {
         loggerInstance.log( 'Broker initialized' );
         await broker.upsertService( 'shoppingCart', {
-          url: 'http://localhost:1984',
+          url: `http://localhost:${expressConfig.port}`,
           eventstore: 'memory'
         });
         await broker.loadServicesSubscriptions();
