@@ -31,7 +31,7 @@
     "strictNullChecks": true,
     "paths": {
 			"@domainEvents": ["./domainEvents/src"]
-		},
+		}
 	},
 	"ts-node": {
     "esm": true,
