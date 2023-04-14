@@ -18,8 +18,9 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "target": "ESNext",
+    "lib": ["ESNext"],
     "noImplicitThis": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -44,9 +45,7 @@
 		]
 	},
 	"include": [
-    "domainEvents",
-    "services",
-    "services/**/package.json",
+    "domainEvents"
   ],
   "exclude": [
     "(?:^|/)node_modules/",
