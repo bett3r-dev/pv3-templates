@@ -1,13 +1,13 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "{{nestedFolders}}tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../build/-service-",
-    "tsBuildInfoFile": "../../build/tsconfig.tsbuildinfo.services--service-",
+    "outDir": "{{nestedFolders}}build/{{service}}",
+    "tsBuildInfoFile": "{{nestedFolders}}build/tsconfig.tsbuildinfo.services-{{service}}",
 		"rootDir": ".",
   },
   "references": [
-    {"path": "../../domainEvents"},
-    {"path": "../../libraries"},
+    {"path": "{{nestedFolders}}domainEvents"},
+    {"path": "{{nestedFolders}}libraries"},
   ],
   "include": [
     ".",

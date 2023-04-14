@@ -86,7 +86,7 @@ Configuration()
 
       broker.onStarted( async () => {
         loggerInstance.log( 'Broker initialized' );
-        await broker.upsertService( 'shoppingCart', {
+        await broker.upsertService( '{{service}}', {
           url: `http://localhost:${expressConfig.port}`,
           eventstore: 'memory'
         });
