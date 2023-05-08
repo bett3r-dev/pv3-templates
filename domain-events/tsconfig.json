@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "../build/domainEvents",
+    "outDir": "../build/domain-events",
 		"rootDir": "./src",
     "tsBuildInfoFile": "../build/tsconfig.tsbuildinfo.domainEvents",
   },

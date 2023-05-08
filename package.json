@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "workspaces": [
-    "domainEvents"
+    "domain-events"
   ],
   "scripts": {
     "clean": "rm -rf build",

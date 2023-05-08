@@ -30,7 +30,7 @@
     // This one is important so @bett3r-dev/jsonschema-definer works with optionals
     "strictNullChecks": true,
     "paths": {
-			"@domainEvents": ["./domainEvents/src"]
+			"@domainEvents": ["./domain-events/src"]
 		}
 	},
 	"ts-node": {
@@ -45,7 +45,7 @@
 		]
 	},
 	"include": [
-    "domainEvents"
+    "domain-events"
   ],
   "exclude": [
     "(?:^|/)node_modules/",

@@ -9,7 +9,7 @@ module.exports = {
     '<rootDir>'
   ],
   moduleNameMapper: {
-    "@domainEvents": "<rootDir>/domainEvents/index.js",
+    "@domainEvents": "<rootDir>/domain-events/index.js",
     "@libraries": "<rootDir>/libraries/index.js",
   },
   globals: {

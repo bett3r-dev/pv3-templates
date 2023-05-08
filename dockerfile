@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Services
 
-COPY build/domainEvents ./domainEvents
+COPY build/domain-events ./domain-events
 COPY config/default.yaml ./config/default.yaml
 RUN npm pkg set scripts.postinstall="link-module-alias"
 
