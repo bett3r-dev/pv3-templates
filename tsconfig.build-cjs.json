@@ -1,15 +1,9 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "build/cjs",
-		"rootDir": "src",
-    "declaration": true,
-    "baseUrl": ".",
-    "sourceMap": true,
     "target": "ESNext",
     "module": "CommonJS",
     "moduleResolution": "nodenext",
-    "composite": false,
-    "strict": true,
-    "skipLibCheck": true
   },
 }

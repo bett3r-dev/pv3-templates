@@ -1,10 +1,7 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "build/mjs",
-    "rootDir": "src",
-    "declaration": true,
-    "baseUrl": ".",
-    "sourceMap": true,
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "nodenext",
@@ -13,7 +10,5 @@
       "ESNext",
       "ES5"
     ],
-    "strict": true,
-    "skipLibCheck": true
   }
 }
