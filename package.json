@@ -1,5 +1,5 @@
 {
-  "name": "test-test-frontend-library",
+  "name": "{{application}}-client-library",
   "version": "1.0.0",
   "exports": {
     "import": "./build/mjs/index.js",
