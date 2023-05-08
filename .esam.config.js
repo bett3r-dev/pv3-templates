@@ -1,7 +1,9 @@
 /** @type {import('@bett3r-dev/pv3-utils-cli').CLIOptions} */
 module.exports = {
-  domainDirectory: './domainEvents',
-  servicesGlobPatterns: ['./services/**/*', './service'],
+  templatesUrlBase: 'https://github.com/bett3r-dev/pv3-templates/archive/refs/heads/',
+  domainDirectory: './domain-events',
+  servicesGlobPatterns: [ './services/**/*', './service' ],
+  createWebApp: true,
   webappDirectory: './webapp',
-  clientLibraryDirectory: './clientLibrary'
+  clientLibraryDirectory: './client-library'
 };
