@@ -2,7 +2,7 @@
 module.exports = {
   templatesUrlBase: 'https://github.com/bett3r-dev/pv3-templates/archive/refs/heads/',
   domainDirectory: './domain-events',
-  servicesGlobPatterns: [ './services/**/*', './service' ],
+  servicesPath: '.',
   createWebApp: true,
   webappDirectory: './webapp',
   clientLibraryDirectory: './client-library'
