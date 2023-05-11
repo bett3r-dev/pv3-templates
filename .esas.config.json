@@ -1,9 +1,9 @@
 {
   "templatesUrlBase": "https://github.com/bett3r-dev/pv3-templates/archive/refs/heads/",
-  "domainDirectory": "./domain-events",
+  "domainPath": "./domain-events",
   "servicesPath": ".",
   "createWebApp": true,
-  "webappDirectory": "./webapp",
-  "clientLibraryDirectory": "./client-library",
+  "webappPath": "./webapp",
+  "clientLibraryPath": "./client-library",
   "clientLibraryPackageName": "application-client-library"
 }
