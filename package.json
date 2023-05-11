@@ -1,5 +1,5 @@
 {
-  "name": "{{application}}-client-library",
+  "name": "{{packageName}}",
   "version": "1.0.0",
   "exports": {
     "import": "./build/mjs/index.js",
