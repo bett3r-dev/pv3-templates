@@ -4,5 +4,6 @@
   "servicesPath": ".",
   "createWebApp": true,
   "webappDirectory": "./webapp",
-  "clientLibraryDirectory": "./client-library"
+  "clientLibraryDirectory": "./client-library",
+  "clientLibraryPackageName": "application-client-library"
 }
