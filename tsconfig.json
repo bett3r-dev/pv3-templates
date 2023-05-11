@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
 		"rootDir": "src",
+    "outDir": "build/cjs",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "nodenext",
     "declaration": true,
     "baseUrl": ".",
     "sourceMap": true,
