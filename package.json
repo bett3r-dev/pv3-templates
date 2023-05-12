@@ -5,10 +5,10 @@
     "import": "./build/mjs/index.js",
     "require": "./build/cjs/index.js"
   },
-  "types": "build/cjs/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "clean": "yarn run -T tsc --build --clean && rm -rf ./build",
-    "build": "yarn run -T tsc --build --verbose && yarn run -T tsc -p tsconfig.build-mjs.json"
+    "clean": "yarn run -T tsc --build --clean && rm -rf build",
+    "build": "yarn run -T tsc --build --verbose && yarn run -T tsc -p tsconfig.esm.json"
   }
 }
+
