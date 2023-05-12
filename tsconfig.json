@@ -3,11 +3,11 @@
   "compilerOptions": {
     "outDir": "{{nestedFolders}}build/{{service}}",
     "tsBuildInfoFile": "{{nestedFolders}}build/tsconfig.tsbuildinfo.services-{{service}}",
+    "composite": true,
 		"rootDir": "."
   },
   "references": [
-    {"path": "{{nestedFolders}}domainEvents"},
-    {"path": "{{nestedFolders}}libraries"}
+    {"path": "{{nestedFolders}}domain-events"}
   ],
   "include": [
     ".",
