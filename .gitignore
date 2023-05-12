@@ -16,3 +16,12 @@ npm-debug.log*
 yarn-error.log*
 .vscode/thunder-tests/thunderActivity.json
 .openapi.json
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
