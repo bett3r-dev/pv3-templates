@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json"
+    "build": "yarn run -T tsc --build --verbose"
   },
   "dependencies": {
     "@bett3r-dev/bett3r-utils": "^4.0.5",
