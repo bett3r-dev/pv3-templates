@@ -6,5 +6,6 @@
   "webappPath": "./webapp",
   "clientLibraryPath": "./client-library",
   "clientLibraryPackageName": "application-client-library",
-  "defaultServiceName": "service"
+  "defaultServiceName": "service",
+  "defaultScreenName": "main"
 }
