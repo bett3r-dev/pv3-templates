@@ -1,8 +1,13 @@
 {
   "root": true,
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "react-app",
+    "react-app/jest"
   ],
+  "overrides": [{
+    "files": ["*.ts", "*.tsx"]
+  }],
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint"
@@ -23,7 +28,8 @@
     "semi": ["error", "always"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "quote-props": ["error", "consistent-as-needed"],
-    "indent": ["error", 2],
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2],
     "eqeqeq": [2, "allow-null"],
     "prefer-template": "error",
 
