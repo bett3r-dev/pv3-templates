@@ -9,8 +9,8 @@ module.exports = {
     '<rootDir>'
   ],
   moduleNameMapper: {
-    "@domainEvents": "<rootDir>/domain-events/index.js",
-    "@libraries": "<rootDir>/libraries/index.js",
+    "{{domainEventsPackageName}}": ["<rootDir>/{{domainPath}}/src"],
+    "{{clientLibraryPackageName}}": ["<rootDir>/{{clientLibraryPath}}/src"],
   },
   globals: {
     'ts-jest': {

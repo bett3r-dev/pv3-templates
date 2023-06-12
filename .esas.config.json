@@ -1,11 +1,19 @@
 {
+
+  "applicationName": "",
   "templatesUrlBase": "https://github.com/bett3r-dev/pv3-templates/archive/refs/heads/",
-  "domainPath": "./domain-events",
+
+  "domainPath": "./packages/domain-events",
+  "domainEventsPackageName": "application-domain-events",
+
+  "serverPath": "./packages/service",
   "servicesPath": ".",
-  "createWebApp": true,
-  "webappPath": "./webapp",
-  "clientLibraryPath": "./client-library",
-  "clientLibraryPackageName": "application-client-library",
   "defaultServiceName": "service",
-  "defaultScreenName": "main"
+
+  "createWebApp": true,
+  "webappPath": "./packages/webapp",
+  "defaultScreenName": "main",
+
+  "clientLibraryPath": "./packages/client-library",
+  "clientLibraryPackageName": "application-client-library"
 }
