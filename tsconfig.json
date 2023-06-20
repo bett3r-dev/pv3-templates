@@ -45,7 +45,9 @@
       "build"
 		]
 	},
-	"include": [],
+	"include": [
+    "packages"
+  ],
   "exclude": [
     "(?:^|/)node_modules/",
     "build"
