@@ -7,7 +7,7 @@
 
   "serverPath": "./packages/service",
   "servicesPath": ".",
-  "defaultServiceName": "service",
+  "defaultServiceName": ".",
 
   "createWebApp": true,
   "webAppPath": "./packages/web-app",
