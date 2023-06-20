@@ -34,7 +34,7 @@ Configuration()
     };
 
     const logger = Logger( loggerConfig, ConsoleLogger());
-    const endpoints = Endpoints( packageJson, EndpointValidation( validateSchema, onValidationError ), Express( expressConfig, logger ));
+    const endpoints = Endpoints( { packageJson }, EndpointValidation( validateSchema, onValidationError ), Express( expressConfig, logger ));
     const database = Database( MemoryDb());
     const eventstore = EventStore( DatabaseEventstore({ collection: 'eventstore' }, logger, database ));
     const eventsourcing = EventSourcing( logger, eventstore, endpoints );
