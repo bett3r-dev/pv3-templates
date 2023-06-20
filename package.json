@@ -7,14 +7,9 @@
     "build": "yarn run -T tsc --build --verbose"
   },
   "dependencies": {
-    "@bett3r-dev/bett3r-utils": "^4.0.5",
-    "@bett3r-dev/jsonschema-definer": "^1.3.3",
-    "link-module-alias":"^1.2.0",
-    "pv3": "^1.0.48",
+    "@bett3r-dev/bett3r-utils": "^4.0.6",
+    "@bett3r-dev/jsonschema-definer": "^1.4.4",
+    "pv3": "^1.0.50",
     "ramda": "^0.29.0"
-  },
-  "_moduleAliases":{
-    {{moduleAliases}}
-    "@domainEvents": "./domainEvents"
   }
 }
