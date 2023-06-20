@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "UNLICENSED",
   "scripts": {
+    "start": "yarn run -T nodemon index.ts",
     "build": "yarn run -T tsc --build --verbose"
   },
   "dependencies": {
