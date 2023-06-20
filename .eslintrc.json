@@ -56,7 +56,9 @@
     "no-param-reassign":"off",
     "prefer-object-spread" : 2,
     "require-yield": "error",
-    "no-extra-boolean-cast":"off"
+    "no-extra-boolean-cast":"off",
+
+    "import/no-anonymous-default-export": "off"
 
   }
 }
