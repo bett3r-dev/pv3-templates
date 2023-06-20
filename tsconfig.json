@@ -1,13 +1,12 @@
 {
   "extends": "{{nestedFolders}}tsconfig.json",
   "compilerOptions": {
-    "outDir": "{{nestedFolders}}build/{{service}}",
-    "tsBuildInfoFile": "{{nestedFolders}}build/tsconfig.tsbuildinfo.services-{{service}}",
+    "outDir": "build",
     "composite": true,
 		"rootDir": "."
   },
   "references": [
-    {"path": "{{nestedFolders}}domain-events"}
+    {"path": "{{nestedFolders}}{{domainEventsPath}}"}
   ],
   "include": [
     ".",
