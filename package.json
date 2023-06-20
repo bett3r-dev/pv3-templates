@@ -10,7 +10,7 @@
   "dependencies": {
     "@bett3r-dev/bett3r-utils": "^4.0.6",
     "@bett3r-dev/jsonschema-definer": "^1.4.4",
-    "pv3": "^1.0.50",
+    "pv3": "^1.0.51",
     "ramda": "^0.29.0"
   }
 }
