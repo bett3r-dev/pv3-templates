@@ -64,6 +64,7 @@ Configuration()
         } catch( err ) {
           log.error( 'Error while creating module', module );
           dieOnError( log )( err );
+          return null;
         }
       })
     );
