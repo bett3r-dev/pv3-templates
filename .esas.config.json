@@ -11,7 +11,7 @@
 
   "createWebApp": true,
   "webAppPath": "./packages/web-app",
-  "defaultScreenName": "main",
+  "defaultScreenName": "Main",
 
   "clientLibraryPath": "./packages/client-library",
   "clientLibraryPackageName": "application-client-library"
