@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the default base folder to 'services'
-base_folder="."
+base_folder="./packages"
 
 # Parse command-line options
 while [ "$#" -gt 0 ]; do
@@ -34,7 +34,6 @@ if [ -z "${service_name}" ]; then
 fi
 
 service_folder="${base_folder}/${service_name}"
-
 # Check if the specified folder exists
 if [ ! -d "${service_folder}" ]; then
   echo "Error: Service folder '${service_folder}' does not exist."
@@ -42,4 +41,4 @@ if [ ! -d "${service_folder}" ]; then
 fi
 
 # Execute the nodemon command with the specified service
-nodemon "${service_folder}/index.ts"
+cd $service_folder && yarn start
