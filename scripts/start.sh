@@ -41,4 +41,4 @@ if [ ! -d "${service_folder}" ]; then
 fi
 
 # Execute the nodemon command with the specified service
-cd $service_folder && yarn start
+cd $service_folder && yarn start "${extra_params[@]}"
