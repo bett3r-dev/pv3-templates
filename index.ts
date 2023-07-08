@@ -11,7 +11,6 @@ import {
   EventSourcing,
   EventStore,
   Express,
-  ExpressConfigSchema,
   loadModulesFromDirectory,
   Logger,
   LoggerConfigSchema,
@@ -26,15 +25,14 @@ import packageJson from './package.json';
 
 Configuration()
   .then( async configuration => {
-    const loggerConfig = configuration.getModuleConfig( 'logger', LoggerConfigSchema );
-    const expressConfig = configuration.getModuleConfig( 'express', ExpressConfigSchema );
+    const { config: loggerConfig } = configuration.getModuleConfig( 'logger', LoggerConfigSchema );
 
     const onValidationError = ( err: any, endpoint: Endpoint ) => {
       log.error( 'Validation error procesing endpoint', endpoint.method, endpoint.route, err );
     };
 
     const logger = Logger( loggerConfig, ConsoleLogger());
-    const endpoints = Endpoints( { packageJson }, EndpointValidation( validateSchema, onValidationError ), Express( expressConfig, logger ));
+    const endpoints = Endpoints( packageJson, configuration, EndpointValidation( validateSchema, onValidationError ), Express( configuration, logger ));
     const database = Database( MemoryDb());
     const eventstore = EventStore( DatabaseEventstore({ collection: 'eventstore' }, logger, database ));
     const eventsourcing = EventSourcing( logger, eventstore, endpoints );
@@ -67,7 +65,7 @@ Configuration()
           return null;
         }
       })
-    );
+    ).then(() => configuration.applyArgs());
 
     database.onStarted( async () => {
       await endpoints.start();
