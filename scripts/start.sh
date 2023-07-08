@@ -20,8 +20,9 @@ while [ "$#" -gt 0 ]; do
         service_name="$1"
         shift
       else
-        echo "Error: Unknown option '$1'"
-        exit 1
+        # Collect the remaining parameters to pass them to the yarn start command
+        extra_params+=("$1")
+        shift
       fi
       ;;
   esac
