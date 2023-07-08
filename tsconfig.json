@@ -30,8 +30,8 @@
     // This one is important so @bett3r-dev/jsonschema-definer works with optionals
     "strictNullChecks": true,
     "paths": {
-			"{{domainEventsPackageName}}": ["{{nestedFolders}}{{domainEventsPath}}/src"],
-			"{{clientLibraryPackageName}}": ["{{nestedFolders}}{{clientLibraryPath}}/src"],
+			"{{domainEventsPackageName}}": ["{{domainEventsPath}}/src"],
+			"{{clientLibraryPackageName}}": ["{{clientLibraryPath}}/src"],
 		}
 	},
 	"ts-node": {
