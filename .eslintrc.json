@@ -58,7 +58,8 @@
     "require-yield": "error",
     "no-extra-boolean-cast":"off",
 
-    "import/no-anonymous-default-export": "off"
+    "import/no-anonymous-default-export": "off",
+    "react/jsx-pascal-case": "off"
 
   }
 }
