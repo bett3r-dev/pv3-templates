@@ -46,4 +46,9 @@ if [ ! -d "${service_folder}" ]; then
 fi
 
 # Execute the nodemon command with the specified service
-cd "$service_folder" && yarn "${extra_params[@]}" "${debug_param:+start:no-debug}"
+cd "$service_folder"
+if [ -z "${debug_param}" ]; then
+  yarn start "${extra_params[@]}"
+else
+  yarn start:no-debug "${extra_params[@]}"
+fi
