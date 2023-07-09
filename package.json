@@ -5,7 +5,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "yarn run -T nodemon index.ts",
-    "openApi": "yarn run -T ts-node index.ts -d",
+    "start:no-debug": "yarn run -T ts-node index.ts",
+    "openApi": "yarn run -T ts-node index.ts generateDocumentation",
     "build": "yarn run -T tsc --build --verbose"
   },
   "dependencies": {
