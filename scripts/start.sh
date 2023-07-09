@@ -14,6 +14,10 @@ while [ "$#" -gt 0 ]; do
       base_folder="$2"
       shift 2
       ;;
+    -n)
+      debug_param="true"
+      shift
+      ;;
     *)
       # Assume the first non-option argument is the service name
       if [ -z "${service_name}" ]; then
@@ -30,7 +34,7 @@ done
 
 # Check if the service name is provided
 if [ -z "${service_name}" ]; then
-  echo "Usage: $0 [-f|--services-folder <base_folder>] <service_name>"
+  echo "Usage: $0 [-f|--services-folder <base_folder>] [-n] <service_name>"
   exit 1
 fi
 
@@ -42,4 +46,4 @@ if [ ! -d "${service_folder}" ]; then
 fi
 
 # Execute the nodemon command with the specified service
-cd $service_folder && yarn start "${extra_params[@]}"
+cd "$service_folder" && yarn "${extra_params[@]}" "${debug_param:+start:no-debug}"
