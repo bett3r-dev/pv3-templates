@@ -13,7 +13,7 @@
     "@bett3r-dev/bett3r-utils": "^4.0.6",
     "@bett3r-dev/jsonschema-definer": "^1.4.4",
     "{{domainEventsPackageName}}": "workspace:*",
-    "pv3": "~1.1.4",
+    "pv3": "1.2.0-alpha.35", 
     "ramda": "^0.29.0"
   }
 }

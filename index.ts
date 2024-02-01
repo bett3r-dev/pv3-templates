@@ -17,7 +17,6 @@ import {
   MemoryCache,
   MemoryDb,
   Ports,
-  Broker,
   validateSchema,
   EndpointValidation
 } from 'pv3';
@@ -32,7 +31,7 @@ Configuration()
     };
 
     const logger = Logger( loggerConfig, ConsoleLogger());
-    const endpoints = Endpoints( packageJson, configuration, EndpointValidation( validateSchema, onValidationError ), Express( configuration, logger ));
+    const endpoints = Endpoints({ packageJson, configuration }, EndpointValidation( validateSchema, onValidationError ), Express( configuration, logger ));
     const database = Database( MemoryDb());
     const eventstore = EventStore( DatabaseEventstore({ collection: 'eventstore' }, logger, database ));
     const eventsourcing = EventSourcing( logger, eventstore, endpoints );
@@ -40,7 +39,7 @@ Configuration()
 
 
     const whiteList = configuration.getModules();
-    const modules = await loadModulesFromDirectory( path.join( __dirname, 'modules' ), whiteList ? { whiteList } : {});
+    const { modules } = await loadModulesFromDirectory( path.join( __dirname, 'modules' ), whiteList ? { whiteList } : {});
 
     const log = logger.createLoggerInstance( 'root' );
 
