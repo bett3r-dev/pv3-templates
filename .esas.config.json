@@ -6,7 +6,7 @@
   "domainEventsPath": "./packages/domain-events",
   "domainEventsPackageName": "application-domain-events",
 
-  "serverPath": "./packages/service",
+  "serverPath": "./packages/server",
   "servicesPath": ".",
   "defaultServiceName": ".",
 
