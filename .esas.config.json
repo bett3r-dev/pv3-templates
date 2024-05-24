@@ -1,6 +1,7 @@
 {
+  "esasVersion": "v0_1_0",
+
   "applicationName": "",
-  "templatesUrlBase": "https://github.com/bett3r-dev/pv3-templates/archive/refs/heads/",
 
   "domainEventsPath": "./packages/domain-events",
   "domainEventsPackageName": "application-domain-events",
@@ -9,7 +10,6 @@
   "servicesPath": ".",
   "defaultServiceName": ".",
 
-  "createWebApp": true,
   "webAppPath": "./packages/web-app",
   "defaultScreenName": "Main",
 
