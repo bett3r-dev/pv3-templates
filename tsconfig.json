@@ -18,7 +18,6 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "module": "NodeNext",
-    "moduleResolution": "node",
     "target": "ESNext",
     "lib": ["ESNext"],
     "noImplicitThis": false,
