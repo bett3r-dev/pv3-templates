@@ -14,7 +14,6 @@
     "@bett3r-dev/jsonschema-definer": "^1.4.4",
     "{{domainEventsPackageName}}": "workspace:*",
     "@bett3r-dev/pv3": "1.0.0",
-    "@bett3r-dev/pv3-adapter-database-mongo": "1.0.0",
     "@bett3r-dev/pv3-adapter-endpoints-express": "1.0.0",
     "@bett3r-dev/pv3-adapter-infrastructure-docker": "1.0.0",
     "@bett3r-dev/pv3-library-cluster-structure": "1.0.0",

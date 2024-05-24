@@ -9,7 +9,8 @@ import {
   EventStore,
   Logger,
   MemoryCache,
-  validateSchema
+  validateSchema,
+  MemoryDb
 } from '@bett3r-dev/pv3';
 import {
   ConfigurationPort,
@@ -19,11 +20,6 @@ import {
 import {
   Express,
 } from '@bett3r-dev/pv3-adapter-endpoints-express';
-import {
-  MongoDb,
-  MongoDbConfigSchema,
-} from '@bett3r-dev/pv3-adapter-database-mongo';
-
 
 import packageJson from './package.json';
 
@@ -32,10 +28,6 @@ export const setupPorts = async ( configuration: ConfigurationPort ): Promise<Po
     'logger',
     LoggerConfigSchema
   );
-  const { config: mongoConfig } = configuration.getModuleConfig(
-    'mongo',
-    MongoDbConfigSchema
-  );
 
   const logger = Logger( loggerConfig, ConsoleLogger());
   const endpoints = Endpoints(
@@ -43,7 +35,7 @@ export const setupPorts = async ( configuration: ConfigurationPort ): Promise<Po
     EndpointValidation( validateSchema ),
     Express( configuration, logger )
   );
-  const database = Database( MongoDb( mongoConfig, logger ));
+  const database = Database(MemoryDb());
   const eventstore = EventStore(
     DatabaseEventstore({ collection: 'eventstore' }, logger, database )
   );
