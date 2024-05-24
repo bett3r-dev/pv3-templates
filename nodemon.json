@@ -1,6 +1,6 @@
 {
   "ignore": [
-    "frontend-library",
+    "(?:^|/)client-library/",
     "thunder-tests"
   ]
 }
