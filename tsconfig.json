@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "build",
     "composite": true,
-		"rootDir": "."
+		"rootDir": ".",
+    "lib": ["esnext", "dom"]
   },
   "references": [
     {"path": "{{nestedFolders}}{{domainEventsPath}}"}
