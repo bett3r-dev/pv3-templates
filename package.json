@@ -20,6 +20,7 @@
     "@bett3r-dev/pv3-library-outbox-manager": "1.0.0",
     "@bett3r-dev/pv3-library-tests": "1.0.0",
     "@bett3r-dev/pv3-types": "1.0.0",
+    "ports": "link:./serverPortsType",
     "ramda": "^0.29.0"
   }
 }
