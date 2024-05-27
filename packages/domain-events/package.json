@@ -4,6 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "clean": "rm -rf build && rm -rf *.tsbuildinfo",
+    "build": "yarn run -T tsc --build --verbose"
+  },
+  "dependencies": {
+    "@bett3r-dev/jsonschema-definer": "^1.4.4",
+    "@bett3r-dev/pv3-types": "1.0.0"
   }
 }
