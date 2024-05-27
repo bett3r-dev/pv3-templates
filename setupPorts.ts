@@ -15,7 +15,6 @@ import {
 import {
   ConfigurationPort,
   LoggerConfigSchema,
-  Ports,
 } from '@bett3r-dev/pv3-types';
 import {
   Express,
@@ -23,7 +22,7 @@ import {
 
 import packageJson from './package.json';
 
-export const setupPorts = async ( configuration: ConfigurationPort ): Promise<Ports> => {
+export const setupPorts = async ( configuration: ConfigurationPort ) => {
   const { config: loggerConfig } = configuration.getModuleConfig(
     'logger',
     LoggerConfigSchema
@@ -50,7 +49,7 @@ export const setupPorts = async ( configuration: ConfigurationPort ): Promise<Po
     database,
     eventsourcing,
     eventstore,
-  } as Ports;
+  };
 
   return ports;
 };
