@@ -12,10 +12,8 @@ module.exports = {
     "{{domainEventsPackageName}}": ["<rootDir>/{{domainPath}}/src"],
     "{{clientLibraryPackageName}}": ["<rootDir>/{{clientLibraryPath}}/src"],
   },
-  globals: {
-    'ts-jest': {
-      isolatedModules: true
-    }
-  },
+  transform: {
+    '^.+\\.ts$': 'ts-jest'
+  }
 
 };
