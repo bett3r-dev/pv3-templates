@@ -9,13 +9,16 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "rm -rf build",
     "prebuild:clean": "yarn clean",
     "build:clean": "yarn build",
+    "clean": "yarn workspaces foreach -Ait run clean",
+    "build": "yarn workspaces foreach -Ait run build",
+    "build:update": "yarn workspaces foreach -pi run build",
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "link-pv3": "yarn link -Arp ../pv3",
     "lint": "eslint --fix --ext ts .",
-    "build": "yarn workspaces run build",
     "start": "./scripts/start.sh",
-    "test": "yarn node --experimental-vm-modules $(yarn bin jest)"
+    "project": "node ./packages/esas-server/scripts/generateProjection.mjs"
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",

@@ -1,7 +1,7 @@
 {
   "workbench.iconTheme": "bett3r-icon-theme",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "thunder-client.saveToWorkspace": true,
   "thunder-client.autoRunCurl": false,
