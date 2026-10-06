@@ -2,13 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "build/mjs",
-    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": [
-      "DOM",
-      "ESNext",
-      "ES5"
-    ],
+    "lib": [ "DOM", "ESNext" ]
   }
 }
